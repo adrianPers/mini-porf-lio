@@ -1,0 +1,115 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'calibri';
+}
+
+header{
+    /* background-color: red; */
+    box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+header a{
+    text-decoration: none;
+}
+
+header > a{
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#menu-lateral{
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    /* background-color: aqua; */
+}
+
+header li{
+    font-size: 20px;
+    
+    /* background-color: red; */
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+header li:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5); 
+}
+
+#btn-menu-header{
+    background-color: red;
+    border: 0px;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5); 
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 100
+}
+
+
+@media screen and (max-width:480px){
+
+
+    header{
+        position: relative;
+    }
+
+    #menu-lateral{
+        position: absolute;
+        background-color: white;
+        border-right:2px solid grey;
+        top: 0px;
+        left: -80%;
+        width: 80%;
+        transition: 0.5s;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+        #menu-lateral li{
+
+            font-size: 30px;
+
+        }
+
+
+
+    .menu-lateral-aberto{
+        left: 0% !important;
+    }
+
+    #btn-menu-header{
+        display: flex;
+    }
+
+    header li{
+    padding: 20px;
+    border-radius:0px;
+    transition: 0.5s;
+}
+
+
+
+}
