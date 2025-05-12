@@ -1,10 +1,24 @@
 
+/* Estilização geral */
+
 *{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
     font-family: 'calibri';
 }
+
+.material-symbols-outlined{
+    display: none !important ;
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 700,
+    'GRAD' 0,
+    'opsz' 100
+  }
+  
+
+/* Header */
 
 header{
     /* background-color: red; */
@@ -35,9 +49,7 @@ header > a{
 }
 
 header li{
-    font-size: 20px;
-    
-    /* background-color: red; */
+    font-size: 20px;    
     padding: 5px;
     border-radius: 5px;
     transition: 0.5s;
@@ -58,14 +70,150 @@ header li:hover{
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5); 
 }
 
+/* Serviços */
 
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 1,
-  'wght' 700,
-  'GRAD' 0,
-  'opsz' 100
+#box-servicos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid;
+    padding: 10px;
 }
+
+.servico{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 150px;
+}
+
+.servico h3{
+    margin-bottom: 10px;
+    text-wrap: nowrap;
+}
+
+.servico img{
+    height: 150px;
+    background-color: rgb(88, 145, 211);
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5); 
+    transition: 1s;
+    z-index: 1;
+    cursor: pointer;
+
+}
+
+.servico ul{
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5); 
+    background-color: rgb(36, 103, 180);
+    border-radius: 5px;
+    height: 150px;
+    width: 150px;
+    top: 25px;
+    left: 10px;
+    overflow: hidden;
+    transition: 0.5s;
+    position: absolute;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 10px;
+}
+
+.ocultar-img{
+    animation: ocultar-img 1s forwards;
+}
+
+.ocultar-lista{
+    animation: ocultar-lista 1s forwards;
+}
+
+.mostrar-lista{
+    animation: mostrar-lista 1s forwards;
+}
+
+.mostrar-img{
+    animation: mostrar-img 1s forwards;
+}
+
+
+@keyframes mostrar-img {
+
+    0%{
+        z-index: 0;
+    }
+
+    70%{
+        transform: translate(-100px);
+        z-index: 1;
+    }
+
+    100%{
+        transform: translate(0px);
+        z-index: 1;
+    }   
+
+}
+
+@keyframes ocultar-img {
+
+    0%{
+        z-index: 1;
+    }
+
+    30%{
+        transform: translate(-100px);
+        z-index: 0;
+    }
+
+    100%{
+        transform: translate(0px);
+        z-index: 0;
+    }   
+
+}
+
+@keyframes ocultar-lista {
+
+    0%{
+        z-index: 1;
+    }
+
+    30%{
+        transform: translate(100px);
+        z-index: 0;
+    }
+
+    100%{
+        transform: translate(0px);
+        z-index: 0;
+    }   
+
+}
+
+@keyframes mostrar-lista {
+
+    0%{
+        z-index: 0;
+    }
+
+    70%{
+        transform: translate(100px);
+        z-index: 1;
+    }
+
+    100%{
+        transform: translate(0px);
+        z-index: 1;
+    }   
+
+}
+
 
 
 @media screen and (max-width:480px){
@@ -94,6 +242,10 @@ header li:hover{
 
         }
 
+        .material-symbols-outlined{
+            display: inline !important;
+        }
+
 
 
     .menu-lateral-aberto{
@@ -110,6 +262,26 @@ header li:hover{
     transition: 0.5s;
 }
 
+#box-servicos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid;
+    padding: 10px;
+    
+    flex-direction: column;
+}
+
+.servico{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 150px;
+
+    margin-bottom: 20px;
+}
 
 
 }
