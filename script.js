@@ -18,6 +18,11 @@ imgsServicos.map((el, indice) => {
 
     el.addEventListener('click', () => {
 
+        el.classList.remove('pulsar')
+        listasServicos[indice].classList.remove('pulsar')
+        listasServicos[indice].style.pointerEvents= 'auto';
+
+
         el.classList.remove('mostrar-img')
         el.classList.add('ocultar-img')
         listasServicos[indice].classList.add('mostrar-lista')
